@@ -1,0 +1,32 @@
+{%extends 'base.html'%}
+
+{%block title%}Home{%endblock%}
+
+{%block content%} 
+
+<div class="container d-flex flex-column align-items-center p-2">
+    <h1 class="my-2">My personal website</h1>
+    <p>This website was created with python!</p>
+</div>
+
+<div class="container d-flex flex-md-row flex-column justify-content-around">
+    <div class="card" style="width: 18rem;">
+        <img class="card-img-top" src="{{url_for('static',filename='images/idea.png')}}" alt="Card image cap">
+        <div class="card-body">
+          <h5 class="card-title">My Projects</h5>
+          <p class="card-text">Explore some of my best projects to learn more about my skills!</p>
+          <a href="{{url_for('projects')}}" class="btn btn-primary">Go to Projects</a>
+        </div>
+    </div>
+
+    <div class="card" style="width: 18rem;">
+        <img class="card-img-top" src="{{url_for('static',filename='images/man.png')}}" alt="Card image cap">
+        <div class="card-body">
+          <h5 class="card-title">About Me</h5>
+          <p class="card-text">Learn more about me, my interests and ambitions!</p>
+          <a href="{{url_for('about')}}" class="btn btn-primary">Go to About</a>
+        </div>
+    </div>
+</div>
+
+{%endblock%}
